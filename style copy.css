@@ -158,23 +158,3 @@ article.page h2 {
   border-bottom: 1px solid #ddd;
   color: #333;
 }
-
-/* Post Styles */
-.post h2 {
-  margin-bottom: 0;
-}
-
-p.post-info {
-  font-size: 87%;
-  color: #999;
-}
-
-/* Image Styles */
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-.post-card-thumbnail {
-  display: flex;
-}

@@ -8,10 +8,17 @@ if (have_posts()) :
   while (have_posts()) : the_post(); ?> 
     <!-- this is the something to do -->
     <article class="post">
-      <h2>
-        <a href="<?php the_permalink(); ?>"><?php the_title() ?></a>
-      </h2>
-      <?php the_content() ?>
+      <div class="post-card-thumbnail">
+        <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('small-thumbnail'); ?></a>
+        <h2>
+          <a href="<?php the_permalink(); ?>"><?php the_title() ?></a>
+        </h2>
+        <p class="post-info"><?php the_time('F jS, Y g:i a'); ?> </p>
+        <p>
+          <?php echo get_the_excerpt() ?>
+          <a href="<?php the_permalink(); ?>">Read more &raquo;</a>
+        </p>
+      </div>
     </article>
   <?php endwhile; // finito
   // if we don't have posts
@@ -23,9 +30,3 @@ if (have_posts()) :
 get_footer()
 
 ?>
-
-
-<!-- notes
-things that are baked into php:
-get_header()
-get_footer() -->
